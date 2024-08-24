@@ -20,19 +20,21 @@ require_once(__DIR__ . '/modules/functions.php');
         <!-- inclusion de l'entête du site -->
         <?php require_once(__DIR__ . '/modules/header.php'); ?>
         <h1>Site de recettes</h1>
-        <a href="bonjour.php?nom=Dupont&amp;prenom=Jean">Dis-moi bonjour !</a>
-        <?php foreach (getRecipes($recipes) as $recipe) : ?>
-            <article>
-                <h3><?php echo $recipe['title']; ?></h3>
-                <div><?php echo $recipe['recipe']; ?></div>
-                <i><?php echo displayAuthor($recipe['author'], $users); ?></i>
-            </article>
-        <?php endforeach ?>
+        <!-- Formulaire de connexion -->
+        <?php require_once(__DIR__ . '/login.php'); ?>
 
+
+        <?php if (isset($loggedUser)) : ?>
+            <?php foreach (getRecipes($recipes) as $recipe) : ?>
+                <article>
+                    <h3><?php echo $recipe['title']; ?></h3>
+                    <div><?php echo $recipe['recipe']; ?></div>
+                    <i><?php echo displayAuthor($recipe['author'], $users); ?></i>
+                </article>
+            <?php endforeach ?>
+        <?php endif; ?>
 
     </div>
-
-
 
     <!-- inclusion du bas de page du site -->
     <?php require_once(__DIR__ . '/modules/footer.php'); ?>
