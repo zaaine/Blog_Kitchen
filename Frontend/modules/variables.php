@@ -19,6 +19,12 @@ $users = [
         'age' => 28,
         'password' => 'laCasto28',
     ],
+    [
+        'full_name' => 'Aziz Zed',
+        'email' => 'aziz@test.com',
+        'age' => 34,
+        'password' => 'azerty',
+    ],
 ];
 
 $recipes = [
@@ -43,6 +49,33 @@ $recipes = [
     [
         'title' => 'Salade Romaine',
         'recipe' => 'Etape 1 : prenez une belle salade',
+        'author' => 'laurene.castor@exemple.com',
+        'is_enabled' => false,
+    ],
+];
+
+$plats = [
+    [
+        'title' => 'Soupe haricots',
+        'recipe' => 'Etape 1 : des haricots !',
+        'author' => 'mickael.andrieu@exemple.com',
+        'is_enabled' => true,
+    ],
+    [
+        'title' => 'Taboulet',
+        'recipe' => 'Etape 1 : de la semoule',
+        'author' => 'mickael.andrieu@exemple.com',
+        'is_enabled' => false,
+    ],
+    [
+        'title' => 'Escalope provençale',
+        'recipe' => 'Etape 1 : prenez une belle escalope',
+        'author' => 'mathieu.nebra@exemple.com',
+        'is_enabled' => true,
+    ],
+    [
+        'title' => 'Salade Grec',
+        'recipe' => 'Etape 1 : prenez une belle Feta',
         'author' => 'laurene.castor@exemple.com',
         'is_enabled' => false,
     ],

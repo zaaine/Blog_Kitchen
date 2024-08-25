@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once(__DIR__ . '/modules/variables.php');
 require_once(__DIR__ . '/modules/functions.php');
 ?>
@@ -32,6 +33,15 @@ require_once(__DIR__ . '/modules/functions.php');
                     <i><?php echo displayAuthor($recipe['author'], $users); ?></i>
                 </article>
             <?php endforeach ?>
+        <?php else : ?>
+            <?php foreach (getRecipes($plats) as $plat) : ?>
+                <article>
+                    <h3><?php echo $plat['title']; ?></h3>
+                    <div><?php echo $plat['recipe']; ?></div>
+                    <i><?php echo displayAuthor($plat['author'], $users); ?></i>
+                </article>
+            <?php endforeach ?>
+
         <?php endif; ?>
 
     </div>
