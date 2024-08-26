@@ -1,7 +1,10 @@
 <?php
 session_start();
+require_once(__DIR__ . '/config/mysql.php');
+require_once(__DIR__ . '/databaseconnect.php');
 require_once(__DIR__ . '/modules/variables.php');
 require_once(__DIR__ . '/modules/functions.php');
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,26 +26,13 @@ require_once(__DIR__ . '/modules/functions.php');
         <h1>Site de recettes</h1>
         <!-- Formulaire de connexion -->
         <?php require_once(__DIR__ . '/login.php'); ?>
-
-
-        <?php if (isset($loggedUser)) : ?>
-            <?php foreach (getRecipes($recipes) as $recipe) : ?>
-                <article>
-                    <h3><?php echo $recipe['title']; ?></h3>
-                    <div><?php echo $recipe['recipe']; ?></div>
-                    <i><?php echo displayAuthor($recipe['author'], $users); ?></i>
-                </article>
-            <?php endforeach ?>
-        <?php else : ?>
-            <?php foreach (getRecipes($plats) as $plat) : ?>
-                <article>
-                    <h3><?php echo $plat['title']; ?></h3>
-                    <div><?php echo $plat['recipe']; ?></div>
-                    <i><?php echo displayAuthor($plat['author'], $users); ?></i>
-                </article>
-            <?php endforeach ?>
-
-        <?php endif; ?>
+        <?php foreach (getRecipes($recipes) as $recipe) : ?>
+            <article>
+                <h3><?php echo $recipe['title']; ?></h3>
+                <div><?php echo $recipe['recipe']; ?></div>
+                <i><?php echo displayAuthor($recipe['author'], $users); ?></i>
+            </article>
+        <?php endforeach ?>
 
     </div>
 
