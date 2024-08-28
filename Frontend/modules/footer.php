@@ -10,8 +10,8 @@
 <body>
     <footer class="bg-light text-center text-lg-start mt-auto">
         <div class="text-center p-3">
-            © 2021 Copyright:
-            <a class="text-dark" href="https://openclassrooms.com/">OpenClassrooms</a>
+            © 2024 Copyright:
+            <a class="text-dark" href="https://portfolio.zaaine.dev/">by Aziz Zaaine</a>
         </div>
     </footer>
 </body>

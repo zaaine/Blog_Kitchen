@@ -23,9 +23,10 @@ CREATE TABLE IF NOT EXISTS `users` (
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 delete from `users`;
-insert into `users` (`age`, `email`, `full_name`, `password`, `user_id`) values (34, 'mickael.andrieu@exemple.com', 'Mickaël Andrieu', 'devine', 1);
-insert into `users` (`age`, `email`, `full_name`, `password`, `user_id`) values (34, 'mathieu.nebra@exemple.com', 'Mathieu Nebra', 'MiamMiam', 2);
-insert into `users` (`age`, `email`, `full_name`, `password`, `user_id`) values (28, 'laurene.castor@exemple.com', 'Laurène Castor', 'laCasto28', 3);
+insert into `users` (`age`, `email`, `full_name`, `password`, `user_id`) values (36, 'gordon@exemple.com', 'Mike Gordon', 'cuisine', 1);
+insert into `users` (`age`, `email`, `full_name`, `password`, `user_id`) values (24, 'pierre@exemple.com', 'Pierre Proust', 'MiamMiam', 2);
+insert into `users` (`age`, `email`, `full_name`, `password`, `user_id`) values (28, 'mathilda-granger@exemple.com', 'Mathilda Granger', 'mgrange28', 3);
+insert into `users` (`age`, `email`, `full_name`, `password`, `user_id`) values (38, 'aziz@exemple.com', 'Aziz Zaaine', 'azerty', 4);
 
 delete from `recipes`;
 insert into `recipes` (`author`, `is_enabled`, `recipe`, `recipe_id`, `title`) values ('mickael.andrieu@exemple.com', 1, "Le cassoulet est une spécialité régionale du Languedoc, à base de haricots secs, généralement blancs, et de viande. À son origine, il était à base de fèves. Le cassoulet tient son nom de la cassole en terre cuite émaillée dite caçòla1 en occitan et fabriquée à Issel.\n", 1, 'Cassoulet');
